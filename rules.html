@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DietSurvival | Server Rules</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#22262a;color:#fff;font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}
+.wrap{width:min(1400px,92%);margin:auto}
+header{min-height:72px;background:#22262a;display:flex;align-items:center;justify-content:space-between;padding:0 max(4%,calc((100% - 1400px)/2));position:relative;z-index:5}
+.brand{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:900}.brand img{height:44px;width:auto}.brand .red{color:#f04452}
+nav{display:flex;gap:34px;align-items:center}nav a{font-size:14px;font-weight:700;padding:25px 0 8px}nav a:hover,nav a.active{color:#f04452;border-bottom:2px solid #f04452}
+.rules-hero{min-height:330px;display:grid;place-items:center;text-align:center;padding:55px 20px;background:linear-gradient(rgba(28,34,47,.74),rgba(53,47,50,.78)),url("assets/hero.jpg") center/cover}
+.rules-hero small{font-weight:800;letter-spacing:.08em}.rules-hero h1{font-size:52px;margin:7px 0 13px;font-weight:900}.rules-hero h1 span{color:#f04452}.rules-hero p{max-width:720px;margin:auto;color:#e0e2e4;line-height:1.65}
+.rules-section{padding:70px 0 85px}.intro{margin-bottom:35px}.intro h2{font-size:30px;margin:0 0 10px}.intro h2 span{color:#f04452}.intro p{color:#bfc3c7;max-width:900px;line-height:1.6}
+.rules-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.rule-card{display:flex;gap:18px;background:#2d3135;border:1px solid #373c41;border-radius:8px;padding:22px;transition:.2s ease}
+.rule-card:hover{transform:translateY(-2px);border-color:#f04452;background:#303438}
+.num{flex:0 0 46px;width:46px;height:46px;border-radius:7px;background:#493035;color:#f04452;display:grid;place-items:center;font-weight:900}
+.rule-card h3{margin:2px 0 7px;font-size:17px}.rule-card p{margin:0;color:#c9cccf;line-height:1.55;font-size:14px}
+.notice{margin-top:28px;background:#4b2d32;border-left:5px solid #f04452;border-radius:7px;padding:22px 25px}.notice strong{display:block;color:#f04452;font-size:19px;margin-bottom:6px}.notice p{margin:0;color:#eee;line-height:1.55}
+.values{text-align:center;margin-top:45px;font-weight:900;letter-spacing:.12em;color:#d8dadd}.values span{color:#f04452;margin:0 9px}
+footer{background:#292d31;padding:19px 0;color:#cfd2d4;font-size:12px}
+@media(max-width:800px){header{padding:14px 5%;flex-wrap:wrap;gap:12px}nav{gap:16px;flex-wrap:wrap}.rules-grid{grid-template-columns:1fr}.rules-hero h1{font-size:39px}}
+</style>
+
+<style id="diet-responsive-v2">
+/* Desktop + phone optimization */
+html{-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{overflow-x:hidden}
+img,video{max-width:100%;height:auto}
+button,a,input{touch-action:manipulation}
+.wrap{width:min(1400px,92%);margin-inline:auto}
+
+/* Avoid oversized fixed content */
+section,main,header,footer{max-width:100%}
+.hero,.staff-hero,.rules-hero{background-position:center;background-size:cover}
+.card,.rule-card{min-width:0}
+
+/* Tablets */
+@media (max-width:1024px){
+  nav{gap:18px!important}
+  .wrap{width:92%!important}
+  .rules-grid{gap:14px!important}
+  .quest-guide{gap:24px!important}
+}
+
+/* Phones */
+@media (max-width:760px){
+  body{font-size:15px}
+  header{
+    height:auto!important;min-height:64px!important;
+    padding:11px 16px!important;gap:10px!important;
+    flex-wrap:wrap!important;position:relative!important
+  }
+  .brand{font-size:18px!important;gap:8px!important}
+  .brand img{height:40px!important;max-width:48px!important;object-fit:contain}
+  nav{
+    width:100%!important;display:flex!important;
+    gap:5px 14px!important;justify-content:flex-start!important;
+    overflow-x:auto!important;white-space:nowrap!important;
+    padding:2px 0 4px!important;scrollbar-width:none
+  }
+  nav::-webkit-scrollbar{display:none}
+  nav a{font-size:12px!important;padding:9px 2px!important;flex:0 0 auto}
+  .discord{padding:9px 12px!important}
+
+  .hero,.staff-hero,.rules-hero{
+    min-height:300px!important;height:auto!important;
+    padding:52px 18px!important;background-attachment:scroll!important
+  }
+  .hero h1,.staff-hero h1,.rules-hero h1{
+    font-size:clamp(32px,10vw,44px)!important;line-height:1.02!important
+  }
+  .hero p,.staff-hero p,.rules-hero p{font-size:14px!important;line-height:1.55!important}
+
+  /* Common two-column sections become stacked */
+  .quest-guide,.portal-tutorial,.shop-guide{
+    grid-template-columns:1fr!important;gap:22px!important;
+    padding:18px!important;margin-top:28px!important
+  }
+  .quest-image img,.portal-tutorial img,.shop-guide img{
+    width:100%!important;max-height:none!important;object-fit:cover
+  }
+
+  .rules-section,.staff-area,main{padding-top:34px!important}
+  .rules-grid{grid-template-columns:1fr!important}
+  .rule-card{padding:17px!important}
+  .rule-card .num{flex-basis:40px!important;width:40px!important;height:40px!important}
+
+  .grid,.staff-grid{gap:14px!important}
+  .card,.member{width:calc(50% - 8px)!important;max-width:190px}
+  .role{margin-bottom:30px!important}
+  .role h2,.role-title{font-size:19px!important}
+
+  footer{padding:18px 16px!important;text-align:center}
+}
+
+/* Very small phones */
+@media (max-width:430px){
+  .wrap{width:91%!important}
+  .hero,.staff-hero,.rules-hero{padding:42px 14px!important}
+  .hero h1,.staff-hero h1,.rules-hero h1{font-size:31px!important}
+  .card,.member{width:100%!important;max-width:220px}
+  .grid,.staff-grid{justify-content:center!important}
+  .rule-card{gap:12px!important}
+  .rule-card h3{font-size:15px!important}
+  .rule-card p{font-size:13px!important}
+}
+</style>
+
+</head>
+<body>
+<header>
+<a class="brand" href="index.html"><img src="assets/logo.png" alt="DietSurvival logo"><b>Diet<span class="red">Survival</span></b></a>
+<nav>
+<a href="index.html">Home</a>
+<a href="tutorial.html">Tutorial</a>
+<a class="active" href="rules.html">Rules</a>
+<a href="https://store.dietsurvival.fun/">Store</a>
+<a href="staff-team.html">Staff-Team</a>
+</nav>
+</header>
+
+<section class="rules-hero">
+<div>
+<small>PLAY.DIETSURVIVAL.FUN</small>
+<h1>SERVER <span>RULES</span></h1>
+<p>Please read the rules before playing. They are here to keep DietSurvival fair, friendly and enjoyable for everyone.</p>
+</div>
+</section>
+
+<main class="rules-section">
+<div class="wrap">
+<div class="intro">
+<h2>DietSurvival <span>Rules</span></h2>
+<p>Breaking the rules may result in warnings, mutes, temporary bans or permanent bans depending on the situation and severity.</p>
+</div>
+<div class="rules-grid"><article class="rule-card"><span class="num">01</span><div><h3>Respect</h3><p>Respect all players and staff. Harassment, bullying and insults are not allowed.</p></div></article>
+<article class="rule-card"><span class="num">02</span><div><h3>Impersonation</h3><p>Impersonating another player or a member of the staff team is prohibited.</p></div></article>
+<article class="rule-card"><span class="num">03</span><div><h3>Scamming</h3><p>Scamming or intentionally deceiving other players is strictly prohibited.</p></div></article>
+<article class="rule-card"><span class="num">04</span><div><h3>Discrimination</h3><p>Racism, discrimination, hate speech and offensive content are not allowed.</p></div></article>
+<article class="rule-card"><span class="num">05</span><div><h3>Chat</h3><p>Do not spam or flood chat. Keep conversations respectful and appropriate for the community.</p></div></article>
+<article class="rule-card"><span class="num">06</span><div><h3>Inappropriate Content</h3><p>NSFW content, nudity, sexual content, self-harm content and inappropriate usernames or skins are prohibited.</p></div></article>
+<article class="rule-card"><span class="num">07</span><div><h3>Politics</h3><p>Political and highly controversial discussions are not allowed on the server.</p></div></article>
+<article class="rule-card"><span class="num">08</span><div><h3>Suspicious Links</h3><p>Phishing links, IP grabbers, malicious files and other suspicious links are prohibited and may result in a permanent ban.</p></div></article>
+<article class="rule-card"><span class="num">09</span><div><h3>Pinging</h3><p>Do not excessively ping players or staff. Repeated abuse may result in a mute or timeout.</p></div></article>
+<article class="rule-card"><span class="num">10</span><div><h3>Advertising</h3><p>Do not advertise other Minecraft servers, Discord servers, YouTube channels, server IPs or referral links.</p></div></article>
+<article class="rule-card"><span class="num">11</span><div><h3>Stealing & Griefing</h3><p>Do not steal from or grief player builds, even when they are unclaimed. Naturally generated structures may be modified.</p></div></article>
+<article class="rule-card"><span class="num">12</span><div><h3>Gameplay Structures</h3><p>End Portals and similar important structures may be claimed, but they must remain accessible to other players.</p></div></article>
+<article class="rule-card"><span class="num">13</span><div><h3>Claims</h3><p>Keep your claims at least 150 blocks away from other players' claims unless you have their permission.</p></div></article>
+<article class="rule-card"><span class="num">14</span><div><h3>Hacking & Exploits</h3><p>Hacks, exploits, autoclickers, macros and bug abuse are prohibited. Report bugs to staff instead of abusing them.</p></div></article>
+<article class="rule-card"><span class="num">15</span><div><h3>Real-Money Trading</h3><p>Trading in-game items or currency for real money is prohibited. Both the buyer and seller may receive a permanent ban.</p></div></article></div>
+
+<div class="notice">
+<strong>Important</strong>
+<p>Staff may take action against behavior that harms the community even if that exact behavior is not specifically listed above. If you find a bug or exploit, report it to staff instead of using it.</p>
+</div>
+<div class="values">RESPECT <span>•</span> PLAY FAIR <span>•</span> HAVE FUN</div>
+</div>
+</main>
+
+<footer><div class="wrap">© 2026 DietSurvival. All rights reserved. &nbsp; • &nbsp; play.dietsurvival.fun</div></footer>
+</body>
+</html>
