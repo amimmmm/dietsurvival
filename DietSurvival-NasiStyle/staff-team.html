@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DietSurvival | Staff-Team</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0e151b;color:#fff;font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}
+.wrap{width:min(1370px,89%);margin:auto}
+header{height:86px;background:#10151a;display:flex;align-items:center;justify-content:space-between;padding:0 max(5.5%,calc((100% - 1370px)/2));border-bottom:1px solid #252b30}
+.brand{display:flex;align-items:center;gap:12px;font-size:23px;font-weight:900}.brand img{height:52px}.red{color:#f13d4e}
+nav{display:flex;align-items:center;gap:34px}nav a{font-weight:700;font-size:14px;padding:30px 0 12px}nav a:hover,nav a.active{color:#f13d4e;border-bottom:2px solid #f13d4e}
+.discord{border:1px solid #e63243!important;border-radius:10px;padding:13px 20px!important;color:#fff!important;background:#451219}
+.hero{height:210px;text-align:center;display:grid;place-items:center;background:linear-gradient(90deg,rgba(10,15,20,.83),rgba(55,13,20,.64),rgba(10,15,20,.84)),url("assets/hero.jpg") center/cover}
+.hero small{letter-spacing:.42em;color:#c9c9c9}.hero h1{font-size:48px;margin:10px 0 8px;font-weight:900}.hero p{margin:0;color:#c9cdd0}.dots{margin-top:13px;color:#bfc2c5}.dots b{color:#f13d4e;margin:0 10px}
+main{padding:25px 0 75px;min-height:680px;background:radial-gradient(circle at 14% 35%,#121c23 0,#0e151b 45%)}
+.role{margin-bottom:22px}.role h2{font-size:20px;margin:0 0 15px;display:inline-block;min-width:150px;border-bottom:4px solid #353b40;padding-bottom:8px;position:relative}
+.role h2:after{content:"";position:absolute;left:0;bottom:-4px;height:4px;width:62px;background:#f13d4e}.role-icon{color:#f13d4e;margin-right:8px}
+.grid{display:flex;gap:24px;flex-wrap:wrap}.card{width:185px;min-height:220px;border:1px solid #30363b;border-radius:9px;background:linear-gradient(145deg,#151c22,#10161b);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:15px;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:#e63445;box-shadow:0 10px 28px rgba(0,0,0,.3)}.owner{border-color:#8e2730;background:radial-gradient(circle at 50% 45%,#3a181c,#15181c 70%)}
+.skin{height:145px;max-width:130px;object-fit:contain;filter:drop-shadow(0 8px 6px #000);transition:.2s}.owner:hover .skin{transform:scale(1.04)}
+.name{font-size:15px;font-weight:900;margin:5px 0 9px}.badge{font-size:12px;border-radius:8px;padding:5px 13px;border:1px solid #f13d4e;background:#641821;color:#ff5360}
+.placeholder{width:55px;height:100px;margin-bottom:15px;opacity:.22;background:linear-gradient(#333 0 28%,#596068 28% 68%,#343a40 68%);clip-path:polygon(18% 0,82% 0,82% 28%,100% 28%,100% 70%,80% 70%,80% 100%,20% 100%,20% 70%,0 70%,0 28%,18% 28%)}
+.admin{color:#ffb35c;border-color:#d9852c;background:#5a3518}.moderator{color:#718eff;border-color:#5369d5;background:#1c2858}.helper{color:#72ee8c;border-color:#36b759;background:#174b29}
+.coming{font-size:13px;font-weight:800;margin-bottom:8px}footer{padding:18px 0;background:#181e23;color:#aaa;font-size:12px}
+@media(max-width:850px){header{height:auto;padding:14px 5%;flex-wrap:wrap;gap:10px}nav{gap:15px;flex-wrap:wrap}.hero h1{font-size:35px}.hero{height:230px}}
+</style>
+<style id="diet-responsive-v2">
+/* Desktop + phone optimization */
+html{-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{overflow-x:hidden}
+img,video{max-width:100%;height:auto}
+button,a,input{touch-action:manipulation}
+.wrap{width:min(1400px,92%);margin-inline:auto}
+
+/* Avoid oversized fixed content */
+section,main,header,footer{max-width:100%}
+.hero,.staff-hero,.rules-hero{background-position:center;background-size:cover}
+.card,.rule-card{min-width:0}
+
+/* Tablets */
+@media (max-width:1024px){
+  nav{gap:18px!important}
+  .wrap{width:92%!important}
+  .rules-grid{gap:14px!important}
+  .quest-guide{gap:24px!important}
+}
+
+/* Phones */
+@media (max-width:760px){
+  body{font-size:15px}
+  header{
+    height:auto!important;min-height:64px!important;
+    padding:11px 16px!important;gap:10px!important;
+    flex-wrap:wrap!important;position:relative!important
+  }
+  .brand{font-size:18px!important;gap:8px!important}
+  .brand img{height:40px!important;max-width:48px!important;object-fit:contain}
+  nav{
+    width:100%!important;display:flex!important;
+    gap:5px 14px!important;justify-content:flex-start!important;
+    overflow-x:auto!important;white-space:nowrap!important;
+    padding:2px 0 4px!important;scrollbar-width:none
+  }
+  nav::-webkit-scrollbar{display:none}
+  nav a{font-size:12px!important;padding:9px 2px!important;flex:0 0 auto}
+  .discord{padding:9px 12px!important}
+
+  .hero,.staff-hero,.rules-hero{
+    min-height:300px!important;height:auto!important;
+    padding:52px 18px!important;background-attachment:scroll!important
+  }
+  .hero h1,.staff-hero h1,.rules-hero h1{
+    font-size:clamp(32px,10vw,44px)!important;line-height:1.02!important
+  }
+  .hero p,.staff-hero p,.rules-hero p{font-size:14px!important;line-height:1.55!important}
+
+  /* Common two-column sections become stacked */
+  .quest-guide,.portal-tutorial,.shop-guide{
+    grid-template-columns:1fr!important;gap:22px!important;
+    padding:18px!important;margin-top:28px!important
+  }
+  .quest-image img,.portal-tutorial img,.shop-guide img{
+    width:100%!important;max-height:none!important;object-fit:cover
+  }
+
+  .rules-section,.staff-area,main{padding-top:34px!important}
+  .rules-grid{grid-template-columns:1fr!important}
+  .rule-card{padding:17px!important}
+  .rule-card .num{flex-basis:40px!important;width:40px!important;height:40px!important}
+
+  .grid,.staff-grid{gap:14px!important}
+  .card,.member{width:calc(50% - 8px)!important;max-width:190px}
+  .role{margin-bottom:30px!important}
+  .role h2,.role-title{font-size:19px!important}
+
+  footer{padding:18px 16px!important;text-align:center}
+}
+
+/* Very small phones */
+@media (max-width:430px){
+  .wrap{width:91%!important}
+  .hero,.staff-hero,.rules-hero{padding:42px 14px!important}
+  .hero h1,.staff-hero h1,.rules-hero h1{font-size:31px!important}
+  .card,.member{width:100%!important;max-width:220px}
+  .grid,.staff-grid{justify-content:center!important}
+  .rule-card{gap:12px!important}
+  .rule-card h3{font-size:15px!important}
+  .rule-card p{font-size:13px!important}
+}
+</style>
+
+</head>
+<body>
+<header>
+<a class="brand" href="index.html"><img src="assets/logo.png" alt="DietSurvival"><b>Diet<span class="red">Survival</span></b></a>
+<nav><a href="index.html">Home</a><a href="index.html#features">Features</a><a href="tutorial.html">Tutorials</a><a href="rules.html">Rules</a><a href="https://store.dietsurvival.fun/">Store</a><a class="active" href="staff-team.html">Staff-Team</a></nav>
+</header>
+<section class="hero"><div><small>DIETSURVIVAL</small><h1>OUR <span class="red">STAFF-TEAM</span></h1><p>Meet the people who keep DietSurvival running and make it a better place for everyone.</p><div class="dots">Play <b>•</b> Support <b>•</b> Community</div></div></section>
+<main><div class="wrap">
+<section class="role"><h2><span class="role-icon">♛</span>Leaders</h2><div class="grid">
+<div class="card owner"><img class="skin" src="assets/pushkar13-owner.png" alt="Pushkar13 Minecraft skin"><div class="name">pushkar13</div><span class="badge">♛ &nbsp; Owner</span></div>
+</div></section>
+
+<section class="role"><h2><span class="role-icon">★</span>Administrators</h2><div class="grid">
+<div class="card"><div class="placeholder"></div><div class="coming">Coming Soon</div><span class="badge admin">★ &nbsp; Admin</span></div>
+</div></section>
+
+<section class="role"><h2><span class="role-icon">⬟</span>Moderators</h2><div class="grid">
+<div class="card"><div class="placeholder"></div><div class="coming">Coming Soon</div><span class="badge moderator">⬟ &nbsp; Moderator</span></div>
+</div></section>
+<section class="role"><h2><span class="role-icon">♟</span>Helpers</h2><div class="grid">
+<div class="card"><div class="placeholder"></div><div class="coming">Coming Soon</div><span class="badge helper">♟ &nbsp; Helper</span></div>
+</div></section>
+</div></main>
+<footer><div class="wrap">© 2026 DietSurvival. All rights reserved.</div></footer>
+</body></html>
